@@ -4,7 +4,7 @@ permalink: /awards/index.html
 title: Awards
 ---
 
-> Lastest Update: 8th Jan 2024 &nbsp; [中文版本 (Chinese Version)](https://amao996.github.io/file/awards-zh/)
+> Lastest Update: 21th April 2024 &nbsp; [中文版本 (Chinese Version)](https://amao996.github.io/file/awards-zh/)
 
 ## Scholarships
 
