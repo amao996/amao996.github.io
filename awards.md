@@ -4,21 +4,11 @@ permalink: /awards/index.html
 title: Awards
 ---
 
-> Lastest Update: 8th Jan 2024 &nbsp; [中文版本 (Chinese Version)](https://caihanlin.com/file/awards-zh/)
+> Lastest Update: 8th Jan 2024 &nbsp; [中文版本 (Chinese Version)](https://amao996.github.io/file/awards-zh/)
 
 ## Scholarships
 
 - Dec 2023：**AAAI-24 Undergraduate Scholarship** ($5000)<br>Only 12 undergraduates are selected around the world
-- Aug 2023：**FEPG Scholarship** ($1400)<br>One of the highest undergraduate awards at FZU
-- May 2023：**XiamenAir Scholarship** ($600)<br>One of the highest undergraduate awards at FZU
-- Oct 2023：Best Academic Performance of Maynooth (€100)
-- Oct 2022：Best Student Project Award of Maynooth (€100)
-- March 2024：First Prize Scholarship of FZU ($2100)
-- March 2023：Second Prize Scholarship of FZU ($1400)
-- Sep 2022：First Prize Scholarship of FZU ($2100)
-- March 2022：First Prize Scholarship of FZU ($2100)
-- Sep 2021：Third Prize Scholarship of FZU ($700)
-- March 2021：First Prize Scholarship of FZU ($2100)<br>Combined degree scholarship between FZU and Maynooth<br>
 
 ## Competitions (Selected)
 
