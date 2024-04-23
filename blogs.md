@@ -20,12 +20,17 @@ title: Blogs
 - [Cambridge暑研回忆录](https://caihanlin.com/blogs/cambridge/)<br>
 - [暂停、暂停、暂停](https://caihanlin.com/blogs/stop/)
 
-### 2021
-
 - [19岁，山高路亦远🎂](https://caihanlin.com/blogs/19yrs)<br>
 - [星野学社实习回忆录](https://caihanlin.com/blogs/star)
 
 ### 刷题随笔
 
 - [位操作](https://amao996.github.io/blogs/algorithm/byte-operation)<br>
-- [本科博客，笔记，回忆录](https://mieclance.club/)
+- [一些数据结构](https://amao996.github.io/blogs/algorithm/map)<br>
+- [树相关](https://amao996.github.io/blogs/algorithm/tree)<br>
+- [数组与链表相关](https://amao996.github.io/blogs/algorithm/array)<br>
+- [数学相关](https://amao996.github.io/blogs/algorithm/math)<br>
+- [滑动窗口](https://amao996.github.io/blogs/algorithm/sliding-window)<br>
+- [二分](https://amao996.github.io/blogs/algorithm/divide)<br>
+- [回溯](https://amao996.github.io/blogs/algorithm/backtrack)
+
