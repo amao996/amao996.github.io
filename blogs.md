@@ -30,7 +30,7 @@ title: Blogs
 
 #### NLP
 
-- A Survey on Knowledge-Enhanced Pre-trained Language Models
+- [A Survey on Knowledge-Enhanced Pre-trained Language Models](https://amao996.github.io/blogs/paper-reading/KEPLMs)<br>
 - 
 
 #### VIDEO
