@@ -13,7 +13,7 @@ void exgcd(int a, int b, int& x, int& y){
 }
 ```
 
-<br> 其中x,y为引用，传入待解参数；a,b为已知量，求解方程ax+by=gcd(a,b)的一组解(x,y)
+其中x,y为引用，传入待解参数；a,b为已知量，求解方程ax+by=gcd(a,b)的一组解(x,y)
 
 ## 类欧
 
