@@ -14,6 +14,41 @@ title: Blogs
 
 ### 论文阅读
 
+#### CV
+
+- RAFT: Recurrent All-Pairs Field Transforms for Optical Flow
+- RAFT-Stereo: Multilevel Recurrent Field Transforms for Stereo Matching
+- Learning Optical Flow from Continuous Spike Streams
+- 
+
+#### ROBOT
+
+- GraspNet-1Billion: A Large-Scale Benchmark for General Object Grasping
+- Graspness Discovery in Clutters for Fast and Accurate Grasp Detection
+- 1000 FPS HDR Video with a Spike-RGB Hybrid Camera
+
+#### NLP
+
+- A Survey on Knowledge-Enhanced Pre-trained Language Models
+
+#### VIDEO
+
+- Semantic Hearing: Programming Acoustic Scenes with Binaural Hearables
+- Hybrid neural networks for on-device directional hearing
+
+#### Milestone article
+
+- ImageNet Classification with Deep Convolutional Neural Networks(AlexNet)
+- Deep Residual Learning for Image Recognition(ResNet)
+- Attention Is All You Need(Transformer)
+- A Gentle Introduction to Graph Neural Networks(GNN)
+- Generative Adversarial Nets(GAN)
+- BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
+- AN IMAGE IS WORTH 16X16 WORDS: TRANSFORMERS FOR IMAGE RECOGNITION AT SCALE(ViT)
+- Masked Autoencoders Are Scalable Vision Learners(MAE)
+
+### 立体匹配
+
 - 
 
 
