@@ -4,7 +4,7 @@
 
 当你需要创造一条新链表的时候，可以使用虚拟头结点简化边界情况的处理。
 
-```C++
+```c++
 ListNode* dummy = new ListNode(-1)
 ```
 
@@ -14,7 +14,7 @@ ListNode* dummy = new ListNode(-1)
 
 ### 前缀和
 
-```C++
+```c++
 NumArray(vector<int>& nums) {
     vector<int> preSum;
     // preSum[0] = 0，便于计算累加和
@@ -30,7 +30,7 @@ NumArray(vector<int>& nums) {
 
 ### 差分数组
 
-```C++
+```c++
 // 差分数组工具类
 class Difference {
     // 差分数组
@@ -70,7 +70,7 @@ class Difference {
 
 ### 双向链表+哈希表实现LFU
 
-```C++
+```c++
 struct Node {
     int key;
     int val;
