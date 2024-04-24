@@ -63,7 +63,7 @@ title: Blogs
 
 #### 一些工具的使用
 
-- [bypy库的使用](https://amao996.github.io/blogs/tools/bypy/)<br>
+- [bypy库的使用](https://amao996.github.io/blogs/tools/bypy)<br>
 - 
 
 
