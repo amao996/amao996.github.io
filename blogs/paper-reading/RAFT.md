@@ -47,7 +47,7 @@ ECCV2020 best paper
 <div align=center><img src="https://amao996.github.io/blogs/paper-reading/imgs/RAFT/gru.png" width="600"></div><br>
 
 
-输入为迭代预测的光流，相关特征，上下文特征；输出$$\Delta _ { f }$$，则当前迭代下预测的光流就是$$f _ { k + 1 } = f _ { k + 1 } + \Delta _ { f } $$
+输入为迭代预测的光流，相关特征，上下文特征；输出 $\Delta _ { f }$，则当前迭代下预测的光流就是 $f _ { k + 1 } = f _ { k + 1 } + \Delta _ { f } $
 
 ### Upsample
 
