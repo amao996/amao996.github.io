@@ -16,15 +16,15 @@ title: Blogs
 
 #### CV
 
-- RAFT: Recurrent All-Pairs Field Transforms for Optical Flow
-- RAFT-Stereo: Multilevel Recurrent Field Transforms for Stereo Matching
+- [RAFT: Recurrent All-Pairs Field Transforms for Optical Flow](https://amao996.github.io/blogs/paper-reading/RAFT)<br>
+- [RAFT-Stereo: Multilevel Recurrent Field Transforms for Stereo Matching](https://amao996.github.io/blogs/paper-reading/RAFT-Stereo)<br>
 - Learning Optical Flow from Continuous Spike Streams
 - 
 
 #### ROBOT
 
-- GraspNet-1Billion: A Large-Scale Benchmark for General Object Grasping
-- Graspness Discovery in Clutters for Fast and Accurate Grasp Detection
+- GraspNet-1Billion: A Large-Scale Benchmark for General Object Grasping<br>
+- Graspness Discovery in Clutters for Fast and Accurate Grasp Detection<br>
 - 1000 FPS HDR Video with a Spike-RGB Hybrid Camera
 - 
 
@@ -35,19 +35,19 @@ title: Blogs
 
 #### VIDEO
 
-- Semantic Hearing: Programming Acoustic Scenes with Binaural Hearables
+- Semantic Hearing: Programming Acoustic Scenes with Binaural Hearables<br>
 - Hybrid neural networks for on-device directional hearing
 - 
 
 #### Milestone article
 
-- ImageNet Classification with Deep Convolutional Neural Networks(AlexNet)
-- Deep Residual Learning for Image Recognition(ResNet)
-- Attention Is All You Need(Transformer)
-- A Gentle Introduction to Graph Neural Networks(GNN)
-- Generative Adversarial Nets(GAN)
-- BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
-- AN IMAGE IS WORTH 16X16 WORDS: TRANSFORMERS FOR IMAGE RECOGNITION AT SCALE(ViT)
+- ImageNet Classification with Deep Convolutional Neural Networks(AlexNet)<br>
+- Deep Residual Learning for Image Recognition(ResNet)<br>
+- Attention Is All You Need(Transformer)<br>
+- A Gentle Introduction to Graph Neural Networks(GNN)<br>
+- Generative Adversarial Nets(GAN)<br>
+- BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding<br>
+- AN IMAGE IS WORTH 16X16 WORDS: TRANSFORMERS FOR IMAGE RECOGNITION AT SCALE(ViT)<br>
 - Masked Autoencoders Are Scalable Vision Learners(MAE)
 - 
 
@@ -63,7 +63,7 @@ title: Blogs
 
 #### 一些工具的使用
 
-- bypy库的使用
+- [bypy库的使用](https://amao996.github.io/blogs/tools/bypy)<br>
 - 
 
 
