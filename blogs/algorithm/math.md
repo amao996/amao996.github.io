@@ -3,7 +3,6 @@
 https://zhuanlan.zhihu.com/p/378728642
 
 ```c++
-//x,y为引用，传入待解参数；a,b为已知量，求解方程ax+by=gcd(a,b)的一组解(x,y)
 void exgcd(int a, int b, int& x, int& y){
     if(b == 0){
         x = 1, y = 0;
@@ -13,6 +12,8 @@ void exgcd(int a, int b, int& x, int& y){
     y -= a / b * x;
 }
 ```
+
+<br> 其中x,y为引用，传入待解参数；a,b为已知量，求解方程ax+by=gcd(a,b)的一组解(x,y)
 
 ## 类欧
 
