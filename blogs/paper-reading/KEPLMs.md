@@ -1,6 +1,6 @@
 ## A Survey on Knowledge-Enhanced Pre-trained Language Models
 
-### 摘要
+### Abstract
 
 ​	自然语言处理（NLP）已经通过使用BERT等预训练语言模型(PLM)发生了革命性的变化，但还面临许多挑战包括较差的可解释性、较弱的推理能力，以及在应用于下游任务时需要大量昂贵的注释数据。通过将外部知识集成到PLM中，知识增强预训练语言模型(KEPLM)具有克服上述限制的潜力。本文概述了KEPLMs中常见的知识类型和不同的知识格式，详细介绍了现有的构建和评估KEPLMs的方法，介绍了KEPLMs在下游任务中的应用并讨论了未来的研究方向。
 
@@ -107,8 +107,9 @@ E-BERT：提出了一种自适应混合掩蔽策略，该策略允许模型在�
 eg：r是每次迭代中随机生成的数，损失函数Lw和Lp来跟踪学习到的词级信息和短语级信息的拟合进度，词级掩蔽相对于短语级掩蔽的相对重要性rt进一步用于计算αt+1使得当前迭代中损耗较大的模态更有可能在下一次迭代中被选择。
 
 <div align=center>
-<img src="https://amao996.github.io/blogs/paper-reading/imgs/KEPLMs/fig5.png" width="  ">
+<img src="https://amao996.github.io/blogs/paper-reading/imgs/KEPLMs/fig5.png" width="600">
 </div><br>
+
 
 ##### 知识相关的预训练任务
 
@@ -159,16 +160,18 @@ DKPLM：
 为此，提出了一种KLT度量方法来识别长尾实体:将每句话中KLT得分低于平均值的实体视为该句话的长尾实体。
 
 <div align=center>
-<img src="https://amao996.github.io/blogs/paper-reading/imgs/KEPLMs/klt.png" width="  ">
+<img src="https://amao996.github.io/blogs/paper-reading/imgs/KEPLMs/klt.png" width="500">
 </div><br>
+
 
 公式中e表示实体，Freq(e)表示实体在语料库中出现的频率，SI(e)表示语义重要性，KC(e)表示在KG中实体e特定跳数的邻居节点数量。
 
 DKPLM将文本中检测到的长尾实体嵌入替换为伪标记嵌入，作为模型的新输入。
 
 <div align=center>
-<img src="https://amao996.github.io/blogs/paper-reading/imgs/KEPLMs/fig9.png" width="  ">
+<img src="https://amao996.github.io/blogs/paper-reading/imgs/KEPLMs/fig9.png" width="650">
 </div><br>
+
 
 eg：
 
@@ -201,8 +204,9 @@ ERNIE中的实体嵌入是通过TransE获得的，TransE以单个三元组作为
 还有其他基于交互节点的工作。这两种模式都通过交互节点交换信息。QA-GNN 通过交互节点将文本空间中的信息整合到知识空间中，在常识性问答中取得了较好的效果。受此启发，GreaseLM在两种模态中设置交互节点，分别学习该模态的知识，然后在融合层交换信息，学习另一模态的知识。
 
 <div align=center>
-<img src="https://amao996.github.io/blogs/paper-reading/imgs/KEPLMs/fig11.png" width="  ">
+<img src="https://amao996.github.io/blogs/paper-reading/imgs/KEPLMs/fig11.png" width="500">
 </div><br>
+
 
 （b）中的方法是在PLM的Transformer层之间增加知识融合模块。
 
@@ -219,8 +223,9 @@ JAKET：JAKET将预训练的语言模型分为前六层和后六层。文本经�
 构建KEPLM的第三种方法显式地使用外部内存，从而保持知识空间和文本空间的分离。
 
 <div align=center>
-<img src="https://amao996.github.io/blogs/paper-reading/imgs/KEPLMs/fig12.png" width="  ">
+<img src="https://amao996.github.io/blogs/paper-reading/imgs/KEPLMs/fig12.png" width="600">
 </div><br>
+
 
 在图1中说明了将外部存储器中的非参数知识应用于下游NLP任务的方法。
 
