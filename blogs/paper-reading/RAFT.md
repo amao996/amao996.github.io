@@ -10,10 +10,6 @@ ECCV2020 best paper
 <div align=center>
 <img src="https://amao996.github.io/blogs/paper-reading/imgs/RAFT/RAFT-model.png" width="  ">
 </div><br>
-
-
-
-
 由特征编码器、相关联层、GRU更新层组成
 
 ### feature encoder
@@ -57,7 +53,9 @@ GRU单元输出的光流分辨率为初始图像的1/8，因此作者提出了�
 
 <div align=center><img src="https://amao996.github.io/blogs/paper-reading/imgs/RAFT/upsample.png" width=""></div><br>
 
-损失函数：L1损失，总损失是真实值与上采样预测之间每个循环块输出的损失之和。加权系数来自于指数计算
+### Loss
+
+L1损失，总损失是真实值与上采样预测之间每个循环块输出的损失之和。加权系数来自于指数计算
 
 <div align=center><img src="https://amao996.github.io/blogs/paper-reading/imgs/RAFT/loss.png" width=""></div><br>
 
