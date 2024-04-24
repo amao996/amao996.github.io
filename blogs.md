@@ -17,7 +17,7 @@ title: Blogs
 #### CV
 
 - [RAFT: Recurrent All-Pairs Field Transforms for Optical Flow](https://amao996.github.io/blogs/paper-reading/RAFT)<br>
-- [RAFT-Stereo: Multilevel Recurrent Field Transforms for Stereo Matching](https://amao996.github.io/blogs/paper-reading/RAFT-Stereo/)<br>
+- [RAFT-Stereo: Multilevel Recurrent Field Transforms for Stereo Matching](https://amao996.github.io/blogs/paper-reading/RAFT-Stereo)<br>
 - Learning Optical Flow from Continuous Spike Streams
 - 
 
@@ -63,7 +63,7 @@ title: Blogs
 
 #### 一些工具的使用
 
-- [bypy库的使用](https://amao996.github.io/blogs/tools/bypy/)<br>
+- [bypy库的使用](https://amao996.github.io/blogs/tools/bypy)<br>
 - 
 
 
