@@ -1,6 +1,6 @@
 ### 二分
 
-```C++
+```c++
 //基础二分
 int binary_search(int[] nums, int target) {
     int left = 0, right = nums.length - 1; 

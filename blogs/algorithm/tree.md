@@ -22,7 +22,7 @@
 
 ​	[遍历]：
 
-```C++
+```c++
 vector<int> res;
 //前序遍历结果
 vector<int> preorderTraverse(TreeNode* root){
@@ -40,9 +40,9 @@ void traverse(TreeNode* root){
 }
 ```
 
-​	[分解]：
+<br>[分解]：
 
-```C++
+```c++
 vector<int>preOrderTraverse(TreeNode* root){
     vector<int> res;
     if(root == nullptr){
@@ -60,11 +60,11 @@ vector<int>preOrderTraverse(TreeNode* root){
 }
 ```
 
-2.层序遍历
+<br>2.层序遍历
 
 方法1：
 
-```C++
+```c++
 void levelTraverse(TreeNode* root){
     if(root == nullptr){
         return;
@@ -90,9 +90,9 @@ void levelTraverse(TreeNode* root){
 }
 ```
 
-方法2：
+<br>方法2：
 
-```C++
+```c++
 vector<vector<int>> levelTraverse(TreeNode* root){
     if(root == nullptr){
         return res;
@@ -115,9 +115,9 @@ void traverse(TreeNode* root, int depth){
 }
 ```
 
-方法3：
+<br>方法3：
 
-```C++
+```c++
 vector<vector<int>> res;
 vector<vector<int>> levelTraverse(TreeNode* root){
     if(root == nullptr){
@@ -156,9 +156,9 @@ void traverse(list<TreeNode*> curLevelNodes){
 }
 ```
 
-## BFS
+## <br>BFS
 
-```C++
+```c++
 int BFS(Node start, Node target) {
     queue<Node> q; 
     set<Node> visited;
@@ -185,9 +185,9 @@ int BFS(Node start, Node target) {
 }
 ```
 
-## 支配树
+## <br>支配树
 
-```C++
+```c++
 namespace dtree // 支配树模板
 {
     const int MAXN = 500020;
@@ -262,3 +262,4 @@ namespace dtree // 支配树模板
 }
 ```
 
+<br>

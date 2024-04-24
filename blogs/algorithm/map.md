@@ -22,7 +22,7 @@
 
 3.常用函数
 
-```C++
+```c++
 empty();	//判断是否为空
 find();		//找到返回迭代器，失败返回end()
 count(2);	//返回2出现的次数
@@ -37,7 +37,7 @@ erase();		//删除元素
 
 1.头文件
 
-```C++
+```c++
 #include<unordered_map>
 ```
 
@@ -53,7 +53,7 @@ erase();		//删除元素
 
 3.常用函数
 
-```C++
+```c++
 unordered_map<int, double> um1; //构造一个key为int类型，value为double类型的空容器
 insert();		//um.insert(pair<int, string>(1, "one"));um.insert(make_pair(4, "four"));
 erase();
@@ -75,13 +75,13 @@ count();
 
 1.头文件：
 
-```C++
+```c++
 #include<queue>
 ```
 
 2.常用大顶堆和小顶堆
 
-```C++
+```c++
 priority_queue<int,vector<int>,greater<int>> pq;//小顶堆
 //不写后两个参数，容器默认为vector，大顶堆
 priority_queue<int,vector<int>,less<int>> pq;	//大顶堆
@@ -111,7 +111,7 @@ emplace(element)	//原地构造一个元素并插入队列
 
 eg：
 
-```C++
+```c++
 #include <iostream>
 #include <queue>
 #include <vector>
@@ -145,7 +145,7 @@ int main()
 
 3.常用函数总结
 
-```C++
+```c++
 //构造，拷贝，析构
 set c;		//产生一个空的set/multiset,不含任何元素	eg: multiset<int> s;
 set c(op);	//以op为排序准则，产生一个空的set/multiset
@@ -183,7 +183,7 @@ c.clear()		//移除所有元素，将容器清空
 
 ### Prim
 
-```C++
+```c++
 class Prim{
 private:
 	//核心数据结构，存储[横切边]的优先级队列
@@ -241,7 +241,7 @@ public:
 
 ### 并查集Union-Find
 
-```C++
+```c++
 class UF{
 private:
 	int count;	//连通分量数目

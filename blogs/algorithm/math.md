@@ -52,7 +52,11 @@ i128 floor_sum(i128 n, i128 m, i128 a, i128 b) {
 }
 ```
 
-函数返回：
+<br>函数返回：
+
+
 $$
 \sum_{i=0}^{n-1}\lfloor \frac{a\times i+b}{m} \rfloor
 $$
+
+<br>
