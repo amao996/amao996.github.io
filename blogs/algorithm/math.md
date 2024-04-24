@@ -17,7 +17,7 @@ void exgcd(int a, int b, int& x, int& y){
 
 ## 类欧
 
-```C++
+```c++
 using i128 = __int128;
 i128 floor_sum(i128 n, i128 m, i128 a, i128 b) {
     i128 ans = 0;
