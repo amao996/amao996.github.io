@@ -1,6 +1,6 @@
 ### 回溯
 
-```C++
+```c++
 result = []
 def backtrack(路径, 选择列表):
     if 满足结束条件:
