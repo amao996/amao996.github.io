@@ -35,7 +35,7 @@ title: Blogs
 
 #### VIDEO
 
-- Semantic Hearing: Programming Acoustic Scenes with Binaural Hearables<br>
+- [Semantic Hearing: Programming Acoustic Scenes with Binaural Hearables](https://amao996.github.io/blogs/paper-reading/semantic-hearing)<br>
 - Hybrid neural networks for on-device directional hearing
 - 
 
@@ -59,6 +59,11 @@ title: Blogs
 
 #### 会议关键点合集
 
+- 
+
+### 项目记录
+
+- [古代玻璃制品的成分分析与鉴别](https://amao996.github.io/blogs/project/2022guosai.pdf)<br>
 - 
 
 #### 一些工具的使用
