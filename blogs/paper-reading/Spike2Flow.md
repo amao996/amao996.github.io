@@ -34,6 +34,10 @@ NeurIPS 2022
 
 与RAFT不同的是提出了三个Flow Head以及三个delta_flow，每次迭代对他们都进行更新。
 
+### Loss
+
+使用average end-point error (AEPE)和percentage of outliers (PO%)作为指标，其中AEPE是预测光流与真实光流的欧氏距离空间平均值；PO%是端点误差同时大于0.5和5 %真实值的像素所占百分比。
+
 ### Ablation Study
 
 <div align=center>
