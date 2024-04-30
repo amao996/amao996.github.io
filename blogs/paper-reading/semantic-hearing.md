@@ -1,6 +1,8 @@
 ## Semantic Hearing: Programming Acoustic Scenes with Binaural Hearables
 
-概述
+UIST '23
+
+### Abstract
 
 aim：让人们能够实时关注于或者忽略特定的声音，同时保留了空间线索（也就是知道声音发出的方位等）
 
