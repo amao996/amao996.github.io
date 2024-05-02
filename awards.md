@@ -4,41 +4,32 @@ permalink: /awards/index.html
 title: Awards
 ---
 
-> Lastest Update: 21th April 2024 &nbsp; [中文版本 (Chinese Version)](https://amao996.github.io/file/awards-zh/)
+> 更新时间：2024/05/02
 
-## Scholarships
+## 综合奖学金
 
-- Dec 2023：**AAAI-24 Undergraduate Scholarship** ($5000)<br>Only 12 undergraduates are selected around the world
+- 2022年10月：玉兰奖学金提名奖（全校仅十人）
+- 2022年10月：国家奖学金
+- 2023年10月：国家奖学金
 
-## Competitions (Selected)
+## 学习奖学金
 
-- Jan 2024：Finalist of China International College Students’ Innovation Competition (Top 3%)
-- Aug 2023：**<font color='red'>Best Technology Award</font>** in National Youth Science Innovation Project Competition
-- Aug 2023：Second Prize in National Collegiate Internet of Things Technology and Application Competition
-- June 2023：First Prize (Provincial championship) in Fujian Youth Science Innovation Project Competition
-- May 2023：**<font color='red'>Finalist Award</font>** in Mathematical Contest In Modeling (Top 1% of all 20508 paper)
-- Nov 2022：First Prize (Provincial Level) in China Undergraduate Mathematical Contest in Modeling
-- Oct 2022：Maynooth International Engineering College Best Student Project in Academic Year 2022
-- Aug 2022： Third Prize in China National College Student Computer Design Competition
-- June 2022：**Champion** of 100-meter Freestyle Swimming Competition of Fuzhou University 2022<br>
 
-## Honors
 
-- Dec 2023：AAAI 2024 UC Scholar<br>Mentor: Tozammel Hossain, University of North Texas
-- Aug 2023：FEPG Scholarship<br>Funded by Fujian Energy Petrochemical Group
-- May 2023：XiamenAir Scholarship<br>Funded by Xiamen Airline, China
-- May 2023：Outstanding Student Leaders of FZU
-- May 2021：Merit Student of Fuzhou University
-- *<font color='gray'>July 2023：Nomination for Baosteel Scholarship</font>*
-- *<font color='gray'>Sep 2022：Nomination for China National Scholarship</font>*
-- *<font color='gray'>June 2022：Nomination for China Telecom Scholarship</font>*<br>
+## 科研竞赛
 
-## Services
+- 2024年01月：
 
-- Dec 2023 - Present：AAAI Student Membership
-- Sep 2022 - Present：IEEE Student Membership
-- Sep 2022 - Present：CAAI Student Membership
-- April 2022：Top 10 Best Volunteers (Only 10/30000) of Fuzhou University
-- Sep 2021 - Sep 2022：Deputy President of Volunteer Department, Youth League Committee of FZU
-- July 2021：Outstanding volunteer at the 44th session of the World Heritage Committee
-- April 2021：Outstanding volunteer at the 4th Digital China Summit<br>
+## 社会服务
+
+- 2022年04月：福州大学年度“最美志愿者”（每年仅10名）
+- 2021年07月：第44届世界遗产大会优秀志愿者
+- 2021年07月：第4届数字中国建设峰会优秀志愿者
+- 2023年05月：福州大学年度优秀学生干部
+- 2022年05月：福州大学年度优秀共青团员
+- 2021年05月：福州大学年度三好学生
+- 2021年09月-2022年09月：福州大学团委志愿者工作部副部长
+- 2020年09月-2021年09月：福州大学梅努斯国际工程学院班长
+- 2022年09月至今：IEEE协会，AAAI协会，中国人工智能学会（学生会员）
+
+## 文体活动
