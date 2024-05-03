@@ -36,13 +36,13 @@ title: Blogs
 #### Milestone article
 
 - ImageNet Classification with Deep Convolutional Neural Networks(AlexNet)<br>
-- Deep Residual Learning for Image Recognition(ResNet)<br>
-- Attention Is All You Need(Transformer)<br>
+- [Deep Residual Learning for Image Recognition(ResNet)](https://amao996.github.io/blogs/paper-reading/ResNet)<br>
+- [Attention Is All You Need(Transformer)](https://amao996.github.io/blogs/paper-reading/Transformer)<br>
 - A Gentle Introduction to Graph Neural Networks(GNN)<br>
 - Generative Adversarial Nets(GAN)<br>
 - BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding<br>
 - AN IMAGE IS WORTH 16X16 WORDS: TRANSFORMERS FOR IMAGE RECOGNITION AT SCALE(ViT)<br>
-- Masked Autoencoders Are Scalable Vision Learners(MAE)
+- Masked Autoencoders Are Scalable Vision Learners(MAE)<br>
 - 
 
 ### 立体匹配
