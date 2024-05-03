@@ -18,3 +18,4 @@ I am a senior undergrad majoring in **SE(software engineering)** at Dalian Unive
 
 ## Research Interests
 
+Including NLP,Large Model,CV,Audio,Speech and so on. I try to contact more fields to find out what's my favorite domain.
