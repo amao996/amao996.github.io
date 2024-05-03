@@ -66,7 +66,13 @@ title: Blogs
 #### 一些工具的使用
 
 - [bypy库的使用](https://amao996.github.io/blogs/tools/bypy)<br>
-- 
+
+
+
+### 机器学习与深度学习
+
+- 各种卷积汇总（反卷积、扩展卷积、因果卷积、图卷积）
+
 
 
 ### 刷题随笔
