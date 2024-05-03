@@ -8,27 +8,39 @@ NIPS 2017
 
 ### 知识概述
 
-- encoder：将$x = (x1, x2, ... , xn)$（原始输入）映射成$z = (z1, z2, ..., zn)$（机器学习可以理解的向量）
+- One-Hot Encoding：在 CV 中，我们通常将输入图片转换为4维（batch, channel, height, weight）张量来表示；而在 NLP 中，可以将输入单词用 One-Hot 形式编码成序列向量。向量长度是预定义的词汇表中拥有的单词量，向量在这一维中的值只有一个位置是1，其余都是0，1对应的位置就是词汇表中表示这个单词的地方。优点是简洁，缺点是很稀疏，如果词很多的话向量会很长，并且无法体现出词与词之间的关系。
+- Word Embedding：能够体现词与词之间的关系，使得意思相近的词有相近的表示结果，同时还能起到降维的效果。通过设计一个可学习的权重矩阵W，将词向量与W进行点乘，得到新的表示结果即为Word Embedding。
 
-- decoder：给定z，生成一个输出序列$(y1,y2,...ym)$（n和m可以一样长也可以不一样长），只能一个一个生成。
+- Positional Encoding：经过 word embedding，我们获得了词与词之间关系的表达形式，但是词在句子中的位置关系还无法体现。由于 Transformer 是并行地处理句子中的所有词，因此需要加入词在句子中的位置信息，结合了这种方式的词嵌入就是 Position Encoding。即预定义了一个函数，通过函数计算出位置信息。
+  $$
+  P E _ { ( p o s , 2 i ) } = \sin ( p o s / 1 0 0 0 0 ^ { 2 i / d } )
+  $$
+
+  $$
+  P E _ { ( p o s , 2 i + 1) } = \cos ( p o s / 1 0 0 0 0 ^ { 2 i / d } )
+  $$
+
+  pos代表词在句子中的位置，d是词向量的维度（通常通过word embedding后是512），2i表示是d中的偶数维度，2i+1代表奇数维度，这种计算方式使得每一维都对应一个正弦曲线。
+
+- encoder：将$$x = (x1, x2, ... , xn)$$（原始输入）映射成$$z = (z1, z2, ..., zn)$$（机器学习可以理解的向量）
+
+- decoder：给定z，生成一个输出序列$$(y1,y2,...ym)$$（n和m可以一样长也可以不一样长），只能一个一个生成。
 
 - auto-regressive:过去时刻的输出又作为当前时刻的输入
 
 - attention机制：q、k、v分别表示query、key、value，输出为一个value的加权和，权重等价于query和对应key的相似度
 
-- Scaled Dot-Product Attention：对query和所有的key进行点积得到值，再对点积结果除以$\sqrt{d _ {k}}$，完成scale；在scale之后进行mask，目的是当t时刻的query只能看到k1到kt-1；再通过softmax获得每个value对应的权重，最后和value加权求和得到输出向量。
+- Scaled Dot-Product Attention：对query和所有的key进行点积得到值，再对点积结果除以$$\sqrt{d _ {k}}$$，完成scale；在scale之后进行mask，目的是当t时刻的query只能看到k1到kt-1；再通过softmax获得每个value对应的权重，最后和value加权求和得到输出向量。
 
   <div align=center><img src="https://amao996.github.io/blogs/paper-reading/imgs/Transformer/attention1.png" width="  "></div><br>
 
   <div align=center><img src="https://amao996.github.io/blogs/paper-reading/imgs/Transformer/math1.png" width="  "></div><br>
 
-  当$d _ {k}$较大时，向量之间的点积结果非常大，会造成softmax函数陷入到梯度很小的区域，不利于反向传播，因此设置缩放因子$\sqrt{d _ {k}}$对点积结果进行尺度化，将其缩小到梯度敏感的区域内。当dk较大时使用Additive attention比较好，Additive attention可以处理q和k不等长的情况。
+  当$$d _ {k}$$较大时，向量之间的点积结果非常大，会造成softmax函数陷入到梯度很小的区域，不利于反向传播，因此设置缩放因子$$\sqrt{d _ {k}}$$对点积结果进行尺度化，将其缩小到梯度敏感的区域内。当dk较大时使用Additive attention比较好，Additive attention可以处理q和k不等长的情况。
 
 - Multi-Head Attention：h次机会学习不同的投影方法，分别做点积再拼接到一起做一次投影。
 
 <div align=center><img src="https://amao996.github.io/blogs/paper-reading/imgs/Transformer/attention2.png" width="  "></div><br>
-
-- Positional Encoding：在输入中加入时序信息
 
 ## Architecture
 
