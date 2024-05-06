@@ -30,7 +30,7 @@ title: Blogs
 #### VIDEO
 
 - [Semantic Hearing: Programming Acoustic Scenes with Binaural Hearables](https://amao996.github.io/blogs/paper-reading/semantic-hearing)<br>
-- Hybrid neural networks for on-device directional hearing
+- [Hybrid neural networks for on-device directional hearing](https://amao996.github.io/blogs/paper-reading/HybridBeam)<br>
 - 
 
 #### Milestone article
