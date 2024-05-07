@@ -27,11 +27,12 @@ title: Blogs
 - [A Survey on Knowledge-Enhanced Pre-trained Language Models](https://amao996.github.io/blogs/paper-reading/KEPLMs)<br>
 - 
 
-#### VIDEO
+#### VOICE
 
 - [Semantic Hearing: Programming Acoustic Scenes with Binaural Hearables](https://amao996.github.io/blogs/paper-reading/semantic-hearing)<br>
 - [Hybrid neural networks for on-device directional hearing](https://amao996.github.io/blogs/paper-reading/HybridBeam)<br>
-- 
+- [Creating speech zones with self-distributing acoustic swarms](https://amao996.github.io/blogs/paper-reading/Creating_speech_zones)<br>
+- [Underwater 3D positioning on smart devices](https://amao996.github.io/blogs/paper-reading/Underwater_3D_positioning)<br>
 
 #### Milestone article
 
