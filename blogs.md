@@ -13,6 +13,7 @@ title: Blogs
 - [RAFT: Recurrent All-Pairs Field Transforms for Optical Flow](https://amao996.github.io/blogs/paper-reading/RAFT)<br>
 - [RAFT-Stereo: Multilevel Recurrent Field Transforms for Stereo Matching](https://amao996.github.io/blogs/paper-reading/RAFT-Stereo)<br>
 - [Learning Optical Flow from Continuous Spike Streams](https://amao996.github.io/blogs/paper-reading/Spike2Flow)<br>
+- [Advances in spike vision（关于spikeCV）](https://amao996.github.io/blogs/paper-reading/spikeCV)<br>
 - 
 
 #### ROBOT
@@ -58,8 +59,6 @@ title: Blogs
 - 
 
 ### 项目记录
-
-- [基于websocket和opencv的水下机器人控制系统](https://amao996.github.io/blogs/project/robot)<br>
 
 - [古代玻璃制品的成分分析与鉴别-2022国赛](https://amao996.github.io/blogs/project/2022guosai.pdf)<br>
 - [全球气温变暖-2022APMCM](https://amao996.github.io/blogs/project/2022apmcm.pdf)<br>
