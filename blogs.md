@@ -73,6 +73,8 @@ title: Blogs
 ### 机器学习与深度学习
 
 - [各种卷积汇总（反卷积、扩展卷积、因果卷积、图卷积）](https://amao996.github.io/blogs/ml_and_dl/conv)<br>
+- [YOLOv5的使用](https://amao996.github.io/blogs/ml_and_dl/YOLOv5)<br>
+- 
 
 
 
