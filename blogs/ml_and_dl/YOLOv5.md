@@ -1,57 +1,57 @@
 ## 搭建环境
 
-1. 首先创建并启用一个conda环境
+- 首先创建并启用一个conda环境
 
-```shell
-conda create -n yolov5 python=3.8
-conda activate yolov5
-```
+  ```shell
+  conda create -n yolov5 python=3.8
+  conda activate yolov5
+  ```
 
-2. 创建pytorch环境
+- 创建pytorch环境
 
-```shell
-pip3 install torch==1.8.2 torchvision==0.9.2 torchaudio==0.8.2 --extra-index-url https://download.pytorch.org/whl/lts/1.8/cu111
-```
+  ```shell
+  pip3 install torch==1.8.2 torchvision==0.9.2 torchaudio==0.8.2 --extra-index-url https://download.pytorch.org/whl/lts/1.8/cu111
+  ```
 
-3. 下载YOLOv5源代码
+- 下载YOLOv5源代码
 
-   去github仓库下载7.0版本：https://github.com/ultralytics/yolov5/releases/tag/v7.0
+  去github仓库下载[7.0版本](https://github.com/ultralytics/yolov5/releases/tag/v7.0)
 
-4. 修改requirements.txt文件
+- 修改requirements.txt文件
 
-   只需要修改下述行
+  只需要修改下述行
 
-   ```shell
-   numpy==1.20.3
-   Pillow==8.3.0
-   # torch>=1.7.0  # see https://pytorch.org/get-started/locally (recommended)
-   # torchvision>=0.8.1
-   ```
+  ```shell
+  numpy==1.20.3
+  Pillow==8.3.0
+  # torch>=1.7.0  # see https://pytorch.org/get-started/locally (recommended)
+  # torchvision>=0.8.1
+  ```
 
-   然后安装requirements中的库
+  然后安装requirements中的库
 
-   ```shell
-   pip install -r requirements.txt
-   ```
+  ```shell
+  pip install -r requirements.txt
+  ```
 
-5. 测试环境
+- 测试环境
 
-   ```shell
-   python detect.py
-   ```
+  ```shell
+  python detect.py
+  ```
 
-   显示类似如下说明安装成功
+  显示类似如下说明安装成功
 
-   ```shell
-   YOLOv5  2022-11-22 Python-3.8.19 torch-1.8.2+cu111 CUDA:0 (NVIDIA GeForce RTX 2060, 6144MiB)
-   
-   Fusing layers...
-   YOLOv5s summary: 213 layers, 7225885 parameters, 0 gradients, 16.4 GFLOPs
-   image 1/2 D:\OneDrive\\yolov5-7.0\data\images\bus.jpg: 640x480 4 persons, 1 bus, 23.0ms
-   image 2/2 D:\OneDrive\\yolov5-7.0\data\images\zidane.jpg: 384x640 2 persons, 2 ties, 25.0ms
-   Speed: 1.0ms pre-process, 24.0ms inference, 3.5ms NMS per image at shape (1, 3, 640, 640)
-   Results saved to runs\detect\exp9
-   ```
+  ```shell
+  YOLOv5  2022-11-22 Python-3.8.19 torch-1.8.2+cu111 CUDA:0 (NVIDIA GeForce RTX 2060, 6144MiB)
+  
+  Fusing layers...
+  YOLOv5s summary: 213 layers, 7225885 parameters, 0 gradients, 16.4 GFLOPs
+  image 1/2 D:\OneDrive\\yolov5-7.0\data\images\bus.jpg: 640x480 4 persons, 1 bus, 23.0ms
+  image 2/2 D:\OneDrive\\yolov5-7.0\data\images\zidane.jpg: 384x640 2 persons, 2 ties, 25.0ms
+  Speed: 1.0ms pre-process, 24.0ms inference, 3.5ms NMS per image at shape (1, 3, 640, 640)
+  Results saved to runs\detect\exp9
+  ```
 
 ## 测试现有模型
 
@@ -187,5 +187,16 @@ pip3 install torch==1.8.2 torchvision==0.9.2 torchaudio==0.8.2 --extra-index-url
    tensorboard --logdir runs
    ```
 
-   
+
+
+
+## 评价指标
+
+mAP@0.5：在 IOU（Intersection over Union）阈值为 0.5 时的mAP
+
+IOU：交并比，预测框和真实框的交集面积与它们的并集面积之比
+
+mAP：mean Average Precision，平均精度均值
+
+AP是Precision-Recall Curve(PRC)下面的面积，其中Precision表示预测为证类别中实际为正类别的比例，Recall表示所有正类别样本中杯正确预测的比例。
 
