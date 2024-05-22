@@ -14,6 +14,7 @@ title: Blogs
 - [RAFT-Stereo: Multilevel Recurrent Field Transforms for Stereo Matching](https://amao996.github.io/blogs/paper-reading/RAFT-Stereo)<br>
 - [Learning Optical Flow from Continuous Spike Streams](https://amao996.github.io/blogs/paper-reading/Spike2Flow)<br>
 - [Advances in spike vision（关于spikeCV）](https://amao996.github.io/blogs/paper-reading/spikeCV)<br>
+- ["GrabCut" ——Interactive Foreground Extraction using Iterated Graph Cuts](https://amao996.github.io/blogs/paper-reading/GrabCut)<br>
 - 
 
 #### ROBOT
