@@ -2,6 +2,12 @@
 
 NeurIPS 2022
 
+### Dataset
+
+以Slow Flow数据集为基础生成flow的ground truth，31个train场景，10个test场景。通过RGB照片生成flow作为模型的ground truth。生成方法是融入注意力机制的RAFT模型。
+
+生成方法：
+
 ### Abstract
 
 提出用于光流估计的Spike2Flow网络，该网络基于differential of spike firing time(DSFT)和空间信息聚合的二值脉冲中提取信息，网络架构在RAFT的基础上丰富了一些组件。并构造了一个真实场景的数据集RSSF。
@@ -18,13 +24,13 @@ NeurIPS 2022
 <img src="https://amao996.github.io/blogs/paper-reading/imgs/spike2flow/encoder.png" width=" ">
 </div><br>
 
-首先对脉冲流进行DSFT表征，用来反映脉冲的发放率，脉冲中的每个像素被表示为the difference in firing time
+首先对脉冲流进行DSFT表征，用来反映脉冲的发放率，脉冲中的每个像素被表示为the difference in firing time（计算当前时刻前后脉冲达到阈值的最小时段）。
 
 <div align=center>
 <img src="https://amao996.github.io/blogs/paper-reading/imgs/spike2flow/dsft.png" width=" ">
 </div><br>
 
-后面的特征提取网络与RAFT的类似；最后进行空间信息的整合(SIA)，通过自注意力机制得到最终的feature
+后面的特征提取网络与RAFT的相同；最后进行空间信息的整合(SIA)，通过自注意力机制得到最终的feature
 
 ### Joint Decoding of Correlation
 
@@ -45,3 +51,4 @@ NeurIPS 2022
 </div><br>
 
 消融实验可知，其中DSFT模块是最不可或缺的，SIA和JCD对模型均有适当的提升。
+
