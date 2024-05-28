@@ -47,7 +47,15 @@ title: Blogs
 - BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding<br>
 - AN IMAGE IS WORTH 16X16 WORDS: TRANSFORMERS FOR IMAGE RECOGNITION AT SCALE(ViT)<br>
 - Masked Autoencoders Are Scalable Vision Learners(MAE)<br>
-- 
+
+
+
+#### Domain Adaptation
+
+- Universal Domain Adaptation
+- OVANet: One-vs-All Network for Universal Domain Adaptation
+
+
 
 ### 立体匹配
 
