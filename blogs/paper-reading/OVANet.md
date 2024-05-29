@@ -20,16 +20,18 @@ ICCV2021
 - universal DA：源标签域已知，对于任何目标域，如果属于源标签集中的任何类别，则对其进行正确分类，否则标记为unknown类
 
 <div align=center>
-<img src="https://amao996.github.io/blogs/paper-reading/imgs/OVANet/DA.png" width="  ">
+<img src="https://amao996.github.io/blogs/paper-reading/imgs/OVANet/DA.png" width=" 500">
 </div><br>
+
 
 #### Current methods
 
 目前的方法人工设定了一个阈值来拒绝unknown实例或通过先验知识进行验证。
 
 <div align=center>
-<img src="https://amao996.github.io/blogs/paper-reading/imgs/OVANet/intro1.png" width="  ">
+<img src="https://amao996.github.io/blogs/paper-reading/imgs/OVANet/intro1.png" width="500">
 </div><br>
+
 
 - 拒绝一定比例的目标样本，此方法在拒绝比率准确的时候效果较好，但是在没有标记的目标样本情况下估计拒绝比率很难。
 - 使用标记的目标样本验证阈值决定unknown：破坏了”没有标记的目标样本“的前提。
@@ -86,19 +88,48 @@ open-set classifier由$$L _ {s}$$个子分类器组成，每个子分类器用�
 <img src="https://amao996.github.io/blogs/paper-reading/imgs/OVANet/openset_training.png" width="  ">
 </div><br>
 
-##### open-set分类的损失函数
+##### open-set classifier的损失函数
 
 $$
-\complement _ { o v a } ( x ^ { s } , y ^ { s } ) = - \log ( p ( \widehat { y } ^ { y ^ { s } } | x ^ { s } ) ) - min_ { j \neq y ^ { s } } \log ( 1 - p ( \widehat { y } ^ { j } | x ^ { s } ) )
+L _ { o v a } ( x ^ { s } , y ^ { s } ) = - \log ( p ( \widehat { y } ^ { y ^ { s } } | x ^ { s } ) ) - min_ { j \neq y ^ { s } } \log ( 1 - p ( \widehat { y } ^ { j } | x ^ { s } ) )
 $$
-
-
 
 #### Open-set Entropy Minimization (OEM)
 
 one-vs-all分类器的熵被最小化，允许模型将没标签的目标样本分类到已知类或标记为unknown。
 
+在源域上训练open-set classifier知乎，提出一种增强未标记目标域中低密度分类的方法。由于目标样本与源样本具有不同的特征，因此无论是闭集分类还是开集分类，它们都可能被错误分类。为此，我们提出了一种新颖的熵最小化方法使开放集分类器适应目标域。
 
+具体来说：对每个未标记的目标样本的所有开放集分类器应用熵最小化训练，计算所有分类器的熵并取平均值，并训练一个模型来最小化熵。
+
+<div align=center>
+<img src="https://amao996.github.io/blogs/paper-reading/imgs/OVANet/min_entropy.png" width="  ">
+</div><br>
+
+通过这种熵最小化，已知的目标样本可以与源样本对齐，而未知的样本可以保持未知。与现有的熵最小化方法[12]的一个明显区别是，由于熵最小化是由开放集分类器而不是封闭集分类器来执行的，我们可以将未知实例保留在未知状态。封闭集分类器进行的熵最小化必然会使未标记的样本与已知类对齐，因为没有未知类的概念。由于我们的开放集分类器具有未知概念，模型可以增加其置信度。
+$$
+L _ { e n t } ( x ^ { t } ) = - \sum _ { j = 1 } ^ { | L _ { s } | } p ( \widehat { y } ^ { j } | x ^ { t } ) \log ( p ( \widehat { y } ^ { j } | x ^ { t } ) ) + ( 1 - p ( \widehat { y } ^ { j } | x ^ { t } ) ) \log ( 1 - p ( \widehat { y } ^ { j } | x ^ { t } ) )
+$$
+
+### Learning
+
+结合开放集分类器和封闭集分类器来学习开放集分类和封闭集分类。
+
+对于closed-set分类器：在特征提取后训练一个线性分类器，使用交叉熵损失，表示为$$ L _ { c l s } ( x , y )$$
+
+整体训练损失如下：
+
+<div align=center>
+<img src="https://amao996.github.io/blogs/paper-reading/imgs/OVANet/loss.png" width="  ">
+</div><br>
+
+其中只有一个超参数$$\lambda$$。
+
+在测试阶段，首先通过closed-set分类器获得最接近的已知类别，然后采用open-set分类器相应的分数
+
+<div align=center>
+<img src="https://amao996.github.io/blogs/paper-reading/imgs/OVANet/deploy.png" width="  ">
+</div><br>
 
 ### Experiment
 
