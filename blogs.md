@@ -52,10 +52,9 @@ title: Blogs
 
 #### Domain Adaptation
 
-- Universal Domain Adaptation
-- OVANet: One-vs-All Network for Universal Domain Adaptation
-
-
+- [Universal Domain Adaptation](https://amao996.github.io/blogs/paper-reading/UDA)<br>
+- [OVANet: One-vs-All Network for Universal Domain Adaptation](https://amao996.github.io/blogs/paper-reading/OVANet)<br>
+- 
 
 ### 立体匹配
 

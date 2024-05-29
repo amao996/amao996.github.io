@@ -12,7 +12,8 @@ CVPR2019
 
 - closed set DA：源标签集和目标标签集相同
 - partial DA：目标标签集是源标签集的子集
-- open set DA：源和目标标签集中存在unknown的标签集和共同标签集
+- open set DA：源标签集是目标标签集的子集
+- open-partial DA：源和目标标签集中存在各自私有的标签集和共同的标签集
 - universal DA(new)：源标签域已知，对于任何目标域，如果属于源标签集中的任何类别，则对其进行正确分类，否则标记为unknown类
 
 同时UDA也面临两个问题：
