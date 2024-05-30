@@ -30,8 +30,9 @@ spike -> dsft
 脉冲流中的每个脉冲表示的是积分过程而不是当前时刻的状态，脉冲流中的“1”表示的是累积光子的数量，而不是光子的到达率，使用从二进制脉冲中提取的特征进行匹配可能无法准确反映场景的结构，因此通过发射时间（firing time）来表示脉冲中包含的信息。脉冲中的每个像素被表示为the difference in firing time（当前时刻前后脉冲达到阈值的最小时段）。
 
 <div align=center>
-<img src="https://amao996.github.io/blogs/paper-reading/imgs/spike2flow/dsft.png" width=" ">
+<img src="https://amao996.github.io/blogs/paper-reading/imgs/spike2flow/dsft.png" width="500">
 </div><br>
+
 计算公式如下
 
 <div align=center>
@@ -44,7 +45,7 @@ spike -> dsft
 
 特征提取网络与RAFT的相同，对输入进行下采样，提取1/8分辨率的特征图，同样的CNN架构也用于上下文网络(Context network)，它只从第一个输入中生成特征。
 
-<div align=center><img src="https://amao996.github.io/blogs/paper-reading/imgs/RAFT/feature-encoder.png" width="500"></div><br>
+<div align=center><img src="https://amao996.github.io/blogs/paper-reading/imgs/RAFT/feature-encoder.png" width="400"></div><br>
 
 #### 融入空间信息(SIA)
 
@@ -75,13 +76,13 @@ $$
 
 对于每个像素而言只需要查找出与他相关的correlation region即可，定义了一个查询算子，通过从相关金字塔中索引来生成特征图。对于第一个图片中的像素点$$ x = ( u , v )$$查找pyramid中对应特征，将frame1图像的点根据当前的光流场估计$$ ( f ^ { 1 } , f ^ { 2 } )$$映射到frame2上的$$ x ^ { \prime } = ( u + f ^ { 1 } ( u ) , v + f ^ { 2 } ( v ) )$$，定义的搜索域表示为下述公式，其中r为搜索半径，把四个层提取到的特征concat到一个特征中
 
-<div align=center><img src="https://amao996.github.io/blogs/paper-reading/imgs/RAFT/corr2.png" width="600"></div><br>
+<div align=center><img src="https://amao996.github.io/blogs/paper-reading/imgs/RAFT/corr2.png" width="500"></div><br>
 
 #### GRU iterative update
 
 迭代更新基于一个GRU，因为特征是2维的，所以分别在水平和竖直两个方向做GRU。
 
-<div align=center><img src="https://amao996.github.io/blogs/paper-reading/imgs/RAFT/gru.png" width="600"></div><br>
+<div align=center><img src="https://amao996.github.io/blogs/paper-reading/imgs/RAFT/gru.png" width="500"></div><br>
 
 
 输入为上一次估计的光流，循环卷积的隐藏状态和相关信息张量；输出 $\Delta _ { f }$，则当前迭代下预测的光流就是 $f _ { k + 1 } = f _ { k + 1 } + \Delta _ { f } $
