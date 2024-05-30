@@ -16,7 +16,7 @@ ECCV2020 best paper
 
 使用了两个共享权值的CNN，从输入的两张图片中提取像素特征，输出为原输入的1/8倍的特征图。同样的CNN架构也用于上下文网络(Context network)，它只从第一张图像生成特征。在归一化方法上只有一个区别——特征提取器使用实例归一化，而上下文网络使用批处理归一化。
 
-<div align=center><img src="https://amao996.github.io/blogs/paper-reading/imgs/RAFT/feature-encoder.png" width="  "></div><br>
+<div align=center><img src="https://amao996.github.io/blogs/paper-reading/imgs/RAFT/feature-encoder.png" width="500"></div><br>
 
 ### Computing Visual Similarity
 
@@ -32,7 +32,7 @@ ECCV2020 best paper
 
 #### correlation lookup
 
-定义了一个查询算子，通过从相关金字塔中索引来生成特征图。对于第一个图片中的像素点查找pyramid中对应特征，将frame1图像的点根据确定的光流场映射到frame2，得到对应坐标，邻域表示为下述公式，其中r为搜索半径，把四个层提取到的特征concat到一个特征中
+对于每个像素而言只需要查找出与他相关的correlation region即可，定义了一个查询算子，通过从相关金字塔中索引来生成特征图。对于第一个图片中的像素点$$ x = ( u , v )$$查找pyramid中对应特征，将frame1图像的点根据当前的光流场估计$$ ( f ^ { 1 } , f ^ { 2 } )$$映射到frame2上的$$ x ^ { \prime } = ( u + f ^ { 1 } ( u ) , v + f ^ { 2 } ( v ) )$$，定义的搜索域表示为下述公式，其中r为搜索半径，把四个层提取到的特征concat到一个特征中
 
 <div align=center><img src="https://amao996.github.io/blogs/paper-reading/imgs/RAFT/corr2.png" width="600"></div><br>
 
