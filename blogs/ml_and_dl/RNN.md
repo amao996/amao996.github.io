@@ -20,16 +20,32 @@
 <img src="https://amao996.github.io/blogs/ml_and_dl/img/rnn/lstm1.png" width="  ">
 </div><br>
 
-输入门：控制输入x和当前计算的状态更新到记忆单元的程度大小
-
-遗忘门：决定从细胞状态中丢弃什么信息，控制输入x和上一层隐藏层输出h被遗忘的程度大小。
-
-内部记忆单元：将 
-
-输出门：控制输入x和当前输出取决于当前记忆单元的程度大小
-
 <div align=center>
 <img src="https://amao996.github.io/blogs/ml_and_dl/img/rnn/lstm2.png" width="  ">
 </div><br>
 
+记忆细胞：给予了LSTM选择记忆功能，使得其有能力自由选择每个时间步里面记忆的内容。
+
+<div align=center>
+<img src="https://amao996.github.io/blogs/ml_and_dl/img/rnn/lstm3.png" width="  ">
+</div><br>
+
+输入门：决定保留多少当前时刻生成的新记忆
+
+遗忘门：决定保留多少旧记忆
+
+输出门：控制输入x和当前输出取决于当前记忆单元的程度大小，把保留后的记忆套到新的知识得到结果用于验证
+
 ## GRU
+
+将LSTM的输入门和遗忘门合并为更新门，将记忆单元与隐藏层合并成重置门，省去输出门，结构相对简单，参数少计算效率高。
+
+输入为当前时刻的输入和上一时刻的隐状态，更新门和重置门的输出是由sigmoid激活函数的两个全连接层给出，将重置门的输出与上一时刻隐状态进行点积加上当前时刻输入通过tanh得到当前时刻的候选隐状态，通过更新门的输出确定最终隐藏状态。
+
+<div align=center>
+<img src="https://amao996.github.io/blogs/ml_and_dl/img/rnn/gru.png" width="  ">
+</div><br>
+
+重置门：决定保留多少旧记忆
+
+更新门：决定保留多少当前时刻生成的新记忆
