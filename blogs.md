@@ -54,7 +54,6 @@ title: Blogs
 
 - [Universal Domain Adaptation](https://amao996.github.io/blogs/paper-reading/UDA)<br>
 - [OVANet: One-vs-All Network for Universal Domain Adaptation](https://amao996.github.io/blogs/paper-reading/OVANet)<br>
-- 
 
 ### 立体匹配
 
@@ -82,9 +81,17 @@ title: Blogs
 
 - [各种卷积汇总（反卷积、扩展卷积、因果卷积、图卷积）](https://amao996.github.io/blogs/ml_and_dl/conv)<br>
 - [YOLOv5的使用](https://amao996.github.io/blogs/ml_and_dl/YOLOv5)<br>
+- [RNN&LSTM&GRU](https://amao996.github.io/blogs/ml_and_dl/RNN)<br>
+- [Position Encoding](https://amao996.github.io/blogs/ml_and_dl/position_encoding)<br>
 - 
 
 
+
+### 数学知识点复习整理
+
+- 线性代数
+- 概率论
+- 
 
 ### 刷题随笔
 
