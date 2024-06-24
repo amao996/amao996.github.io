@@ -22,7 +22,6 @@ title: Blogs
 - GraspNet-1Billion: A Large-Scale Benchmark for General Object Grasping<br>
 - Graspness Discovery in Clutters for Fast and Accurate Grasp Detection<br>
 - 1000 FPS HDR Video with a Spike-RGB Hybrid Camera
-- 
 
 #### NLP
 
