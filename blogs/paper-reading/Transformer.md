@@ -38,7 +38,7 @@ NIPS 2017
 
   当$$d _ {k}$$较大时，向量之间的点积结果非常大，会造成softmax函数陷入到梯度很小的区域，不利于反向传播，因此设置缩放因子$$\sqrt{d _ {k}}$$对点积结果进行尺度化，将其缩小到梯度敏感的区域内。当dk较大时使用Additive attention比较好，Additive attention可以处理q和k不等长的情况。
 
-- Multi-Head Attention：h次机会学习不同的投影方法，分别做点积再拼接到一起做一次投影。
+- Multi-Head Attention：h次机会学习不同的投影方法，分别做点积再拼接到一起做一次投影。在base model中，将d_model=512维度的向量转换成n_head=8个64维度的向量，这样每个注意力头都有独立的64维度的表示。将输入表示投影到多头注意力机制的多个子空间中，从而能够捕捉不同的注意力模式。
 
 <div align=center><img src="https://amao996.github.io/blogs/paper-reading/imgs/Transformer/attention2.png" width="  "></div><br>
 
@@ -51,11 +51,18 @@ NIPS 2017
 由六个相同的层堆叠而成，每层由一个多头注意力块和一个位置全连接前馈网络组成，在子层之间采用残差连接和正则化。
 
 1. 多头注意力块
+
 2. 位置全连接前馈网络：线性层+ReLU+线性层
+
 3. 残差连接：每个子层的输出为该子层的输入和输出之和，要求每个子层的输入和输出维度相同。（训练的时候可以使梯度直接走捷径反传到最初始层）
+
 4. 正则化(Layer Normalization)：在把数据送入激活函数之前进行，将数据归一化为均值位0，方差为1的数据（加快训练速度，加速收敛的作用，同时也可以避免梯度消失和梯度爆炸的问题）。Batch Normalization更适用于CNN处理图像，Layer Normalization更适用于序列化模型。
 
-
+5. Feed Forward：前馈神经网络，先将dimension提升forward_expansion倍，经过relu激活函数再降维
+   $$
+   F F N ( x ) = \max ( 0 , x W _ { 1 } + b _ { 1 } ) W _ { 2 } + b _ { 2 }
+   $$
+   
 
 ### Decoder
 
