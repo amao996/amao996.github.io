@@ -2,6 +2,8 @@
 
 NIPS 2017
 
+参考：https://www.jintiankansha.me/t/RcTuLXkjul
+
 ### Abstract
 
 旧问题新技术，提出一种完全基于注意力机制的transformer架构，不使用CNN和RNN，并行度很高。 
@@ -9,6 +11,11 @@ NIPS 2017
 ### 知识概述
 
 - One-Hot Encoding：在 CV 中，我们通常将输入图片转换为4维（batch, channel, height, weight）张量来表示；而在 NLP 中，可以将输入单词用 One-Hot 形式编码成序列向量。向量长度是预定义的词汇表中拥有的单词量，向量在这一维中的值只有一个位置是1，其余都是0，1对应的位置就是词汇表中表示这个单词的地方。优点是简洁，缺点是很稀疏，如果词很多的话向量会很长，并且无法体现出词与词之间的关系。
+
+- 残差连接：$$F(x) = F(x)+x$$，在对x求偏导的时候多了一个常数项1，所以在反向传播过程中不会造成梯度消失。
+
+- Layer Normalization：在每个样本上计算均值和方差，而batch normalization是沿着数据批量上做归一化。
+
 - Word Embedding：能够体现词与词之间的关系，使得意思相近的词有相近的表示结果，同时还能起到降维的效果。通过设计一个可学习的权重矩阵W，将词向量与W进行点乘，得到新的表示结果即为Word Embedding。
 
 - Positional Encoding（使用的绝对位置编码）：经过 word embedding，我们获得了词与词之间关系的表达形式，但是词在句子中的位置关系还无法体现。由于 Transformer 是并行地处理句子中的所有词，因此需要加入词在句子中的位置信息，结合了这种方式的词嵌入就是 Position Encoding。即预定义了一个函数，通过函数计算出位置信息。<br>
@@ -42,15 +49,18 @@ NIPS 2017
 
 <div align=center><img src="https://amao996.github.io/blogs/paper-reading/imgs/Transformer/attention2.png" width="  "></div><br>
 
+- padding mask：在所有scaled dot-product attention都要用到，由于每个批次输入序列长度不同，所以需要对其进行对齐，也就是在较短的序列后面填充0，而在attention应该忽略这些位置，因此把这些位置的值加上一个非常大的负数，这样的话经过softmax后这些位置的概率就会接近0。而padding mask实际上就是一个张量，每个值都是bool值，值为False的地方为实际处理的地方，值为True的地方表示需要忽略的位置。
+- sequence mask：只在decoder中的self-attention用到，为了使decoder不能看到未来的信息，也就是对于一个序列，在时刻t，decoder的输出应该只依赖于该时刻之前的输出，而不能依赖t时刻之后的输出，所以需要通过sequence mask把t时刻之后的信息抹去。具体做法是产生一个上三角矩阵，上三角值全为1，对角线和下三角值为0。
+
 ## Architecture
 
 <div align=center><img src="https://amao996.github.io/blogs/paper-reading/imgs/Transformer/model.png" width="  "></div><br>
 
 ### Encoder
 
-由六个相同的层堆叠而成，每层由一个多头注意力块和一个位置全连接前馈网络组成，在子层之间采用残差连接和正则化。
+由六个相同的层堆叠而成，每层由一个多头自注意力块和一个位置全连接前馈网络组成，在子层之间采用残差连接和正则化。
 
-1. 多头注意力块
+1. 多头自注意力块
 
 2. 位置全连接前馈网络：线性层+ReLU+线性层
 
@@ -58,7 +68,7 @@ NIPS 2017
 
 4. 正则化(Layer Normalization)：在把数据送入激活函数之前进行，将数据归一化为均值位0，方差为1的数据（加快训练速度，加速收敛的作用，同时也可以避免梯度消失和梯度爆炸的问题）。Batch Normalization更适用于CNN处理图像，Layer Normalization更适用于序列化模型。
 
-5. Feed Forward：前馈神经网络，先将dimension提升forward_expansion倍，经过relu激活函数再降维
+5. Feed Forward：前馈神经网络，先将dimension提升到d_ff，经过relu激活函数再降维
    $$
    F F N ( x ) = \max ( 0 , x W _ { 1 } + b _ { 1 } ) W _ { 2 } + b _ { 2 }
    $$
@@ -66,4 +76,8 @@ NIPS 2017
 
 ### Decoder
 
-由六个相同的层堆叠而成，与encoder相比多一个掩码多头注意力机制，目的是让t时刻不会看到t时刻之后的输入而只能看到之前的输入（也就是过滤掉t时刻之后的数据）。key和value来自于encoder的输出，query来自decoder下一个attention的输入，也就是掩码多头注意力块的输出。
+由六个相同的层堆叠而成，与encoder相比多一个掩码多头注意力机制。
+
+1. 掩码多头自注意力块：让t时刻不会看到t时刻之后的输入而只能看到之前的输入（也就是过滤掉t时刻之后的数据）。
+2. encoder-decoder多头注意力块：key和value来自于encoder的输出，query来自decoder下一个attention的输入，也就是掩码多头注意力块的输出。
+3. 前馈神经网络
