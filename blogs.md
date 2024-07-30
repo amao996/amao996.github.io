@@ -15,7 +15,7 @@ title: Blogs
 - [Learning Optical Flow from Continuous Spike Streams](https://amao996.github.io/blogs/paper-reading/Spike2Flow)<br>
 - [Advances in spike vision（关于spikeCV）](https://amao996.github.io/blogs/paper-reading/spikeCV)<br>
 - ["GrabCut" ——Interactive Foreground Extraction using Iterated Graph Cuts](https://amao996.github.io/blogs/paper-reading/GrabCut)<br>
-- 
+- [Extracting Motion and Appearance via Inter-Frame Attention for Efficient Video Frame Interpolation](https://amao996.github.io/blogs/paper-reading/EMA_VFI)<br>
 
 #### ROBOT
 
@@ -33,8 +33,13 @@ title: Blogs
 - [Semantic Hearing: Programming Acoustic Scenes with Binaural Hearables](https://amao996.github.io/blogs/paper-reading/semantic-hearing)<br>
 - [Hybrid neural networks for on-device directional hearing](https://amao996.github.io/blogs/paper-reading/HybridBeam)<br>
 - [Creating speech zones with self-distributing acoustic swarms](https://amao996.github.io/blogs/paper-reading/Creating_speech_zones)<br>
-
 - [Underwater 3D positioning on smart devices](https://amao996.github.io/blogs/paper-reading/Underwater_3D_positioning)<br>
+
+### Speech Recognition
+
+- [SPEECH-TRANSFORMER: A NO-RECURRENCE SEQUENCE-TO-SEQUENCE MODEL FOR SPEECH RECOGNITION](https://amao996.github.io/blogs/paper-reading/SpeechTransformer)<br>
+- [THE SPEECHTRANSFORMER FOR LARGE-SCALE MANDARIN CHINESE SPEECH RECOGNITION](https://amao996.github.io/blogs/paper-reading/SpeechTransformer2)<br>
+- 
 
 #### Milestone article
 
@@ -68,7 +73,8 @@ title: Blogs
 
 - [古代玻璃制品的成分分析与鉴别-2022国赛](https://amao996.github.io/blogs/project/2022guosai.pdf)<br>
 - [全球气温变暖-2022APMCM](https://amao996.github.io/blogs/project/2022apmcm.pdf)<br>
--  [电商物流网络包裹应急调运与结构优化问题-2023Mathorcup](https://amao996.github.io/blogs/project/2023mathorcup.pdf)
+-  [电商物流网络包裹应急调运与结构优化问题-2023Mathorcup](https://amao996.github.io/blogs/project/2023mathorcup.pdf)<br>
+-  
 
 #### 一些工具的使用
 
@@ -82,9 +88,8 @@ title: Blogs
 - [YOLOv5的使用](https://amao996.github.io/blogs/ml_and_dl/YOLOv5)<br>
 - [RNN&LSTM&GRU](https://amao996.github.io/blogs/ml_and_dl/RNN)<br>
 - [Position Encoding](https://amao996.github.io/blogs/ml_and_dl/position_encoding)<br>
+- [label smoothing](https://amao996.github.io/blogs/ml_and_dl/label_smoothing)<br>
 - 
-
-
 
 ### 保研复习整理
 
