@@ -43,7 +43,7 @@ NIPS 2017
 
   <div align=center><img src="https://amao996.github.io/blogs/paper-reading/imgs/Transformer/math1.png" width="  "></div><br>
 
-  当$$d _ {k}$$较大时，向量之间的点积结果非常大，会造成softmax函数陷入到梯度很小的区域，不利于反向传播，因此设置缩放因子$$\sqrt{d _ {k}}$$对点积结果进行尺度化，将其缩小到梯度敏感的区域内。当dk较大时使用Additive attention比较好，Additive attention可以处理q和k不等长的情况。
+  当$$d _ {k}$$较大时，向量之间的点积结果非常大，会造成softmax函数陷入到梯度很小的区域，不利于反向传播，因此设置缩放因子$$\sqrt{d _ {k}}$$对点积结果进行尺度化，将其缩小到梯度敏感的区域内。当$$d _ {k}$$较大时使用Additive attention比较好，Additive attention可以处理q和k不等长的情况。
 
 - Multi-Head Attention：h次机会学习不同的投影方法，分别做点积再拼接到一起做一次投影。在base model中，将d_model=512维度的向量转换成n_head=8个64维度的向量，这样每个注意力头都有独立的64维度的表示。将输入表示投影到多头注意力机制的多个子空间中，从而能够捕捉不同的注意力模式。
 
