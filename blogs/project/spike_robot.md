@@ -14,10 +14,10 @@
 
 ​	下述模型为graspnet中的模型，本项目基于这个模型将输入和point encoder-decoder部分修改。
 
-![model2](D:\OneDrive\桌面\BaiduSyncdisk\amao996.github.io\blogs\project\spike_robot\model2.png)
+![model2](I:\amao996.github.io\blogs\project\spike_robot\model2.png)
 
 ​	具体修改框架如下图所示
 
-![model1](D:\OneDrive\桌面\BaiduSyncdisk\amao996.github.io\blogs\project\spike_robot\model1.png)
+![model1](I:\amao996.github.io\blogs\project\spike_robot\model1.png)
 
 ​	首先对spike stream进行DSFT转换，所谓DSFT即differential of spike firing time，提出于论文Learning Optical Flow from Continuous Spike Streams，这种方法可以对spike进行高效表示，随后进行特征提取，该部分与RAFT论文中相似。随后通过构建3D关联矩阵，将双目信息进行融合。最后通过GRU提取到特征。

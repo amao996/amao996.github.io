@@ -14,9 +14,9 @@ NIPS 2017
 
 - 残差连接：$$F(x) = F(x)+x$$，在对x求偏导的时候多了一个常数项1，所以在反向传播过程中不会造成梯度消失。
 
-- Layer Normalization：在每个样本上计算均值和方差，而batch normalization是沿着数据批量上做归一化。
+- Layer Normalization：对每个样本在同一层内的所有特征进行归一化，而batch normalization是对每个小批次数据的同一维度的特征进行归一化。
 
-- Word Embedding：能够体现词与词之间的关系，使得意思相近的词有相近的表示结果，同时还能起到降维的效果。通过设计一个可学习的权重矩阵W，将词向量与W进行点乘，得到新的表示结果即为Word Embedding。
+- Word Embedding：传统的 one-hot 编码无法捕捉单词之间的语义关系，因为每个单词都被表示为独立的、稀疏的向量。Word embedding 通过将单词映射为密集的向量，使得语义相近的词（例如 "king" 和 "queen"）在向量空间中更接近，从而能够反映单词间的语义相似性，同时还能起到降维的效果。通过设计一个可学习的权重矩阵W，将词向量与W进行点乘，得到新的表示结果即为Word Embedding。
 
 - Positional Encoding（使用的绝对位置编码）：经过 word embedding，我们获得了词与词之间关系的表达形式，但是词在句子中的位置关系还无法体现。由于 Transformer 是并行地处理句子中的所有词，因此需要加入词在句子中的位置信息，结合了这种方式的词嵌入就是 Position Encoding。即预定义了一个函数，通过函数计算出位置信息。<br>
   $$

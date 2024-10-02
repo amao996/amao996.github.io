@@ -21,7 +21,7 @@ CVPR 2023
 
 #### Low-level Feature Extractor
 
-第一步：求第i帧$$I _ {i}$$的low level feature：$$F ( I _ { i } ) = L _ { i } ^ { 0 } , L _ { i } ^ { 1 } , L _ { i } ^ { 2 }$$，其中$$F$$的特征提取器，这里$$L$$用的是简单CNN来提取特征，其中$$L _ { i } ^ { k }$$的维度为$$\frac { H } { 2 ^ k } \times \frac { W } { 2 ^ k } \times 2 ^ { k } C$$，这样做可以减少计算量但是会造成transformer得不到细节信息，因此需要第二步的操作。
+第一步：求第i帧$$I _ {i}$$的low level feature：$$F ( I _ { i } ) = L _ { i } ^ { 0 } , L _ { i } ^ { 1 } , L _ { i } ^ { 2 }$$，其中$$F$$是特征提取器，这里$$L$$用的是简单CNN来提取特征，其中$$L _ { i } ^ { k }$$的维度为$$\frac { H } { 2 ^ k } \times \frac { W } { 2 ^ k } \times 2 ^ { k } C$$，这样做可以减少计算量但是会造成transformer得不到细节信息，因此需要第二步的操作。
 
 第二步：求第i帧$$I _ {i}$$的cross-scale information：将上述得到的特征图输入到multi-scale dilated convolution中，即$$\frac { H } { 2 ^ k } \times \frac { W } { 2 ^ k } \times 2 ^ { k } C$$的数据对应stride为$$2 ^ {3 - k}$$以及dilation对应为$$2 ^ {2 - k}$$。也就是说不同尺寸对应于不同的反卷积，所以叫做multi-scale dilated convolution。
 
@@ -104,4 +104,3 @@ $$
 L _ { r e c } = f ( \widehat { I } _ { t } , I _ { t } ^ { G T } )
 $$
 应用Laplacian loss作为f，表示了对变形帧与真实值之间的拉普拉斯金字塔进行L1距离测量。
-
