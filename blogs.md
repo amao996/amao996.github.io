@@ -48,10 +48,12 @@ title: Blogs
 - [Deep Residual Learning for Image Recognition(ResNet)](https://amao996.github.io/blogs/paper-reading/ResNet)<br>
 - [Attention Is All You Need(Transformer)](https://amao996.github.io/blogs/paper-reading/Transformer)<br>
 - A Gentle Introduction to Graph Neural Networks(GNN)<br>
-- Generative Adversarial Nets(GAN)<br>
-- BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding<br>
-- AN IMAGE IS WORTH 16X16 WORDS: TRANSFORMERS FOR IMAGE RECOGNITION AT SCALE(ViT)<br>
-- Masked Autoencoders Are Scalable Vision Learners(MAE)<br>
+- [Generative Adversarial Nets(GAN)](https://amao996.github.io/blogs/paper-reading/GAN)<br>
+- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://amao996.github.io/blogs/paper-reading/BERT)<br>
+- [AN IMAGE IS WORTH 16X16 WORDS: TRANSFORMERS FOR IMAGE RECOGNITION AT SCALE(ViT)](https://amao996.github.io/blogs/paper-reading/ViT)<br>
+- [Masked Autoencoders Are Scalable Vision Learners(MAE)](https://amao996.github.io/blogs/paper-reading/MAE)<br>
+- [Swin Transformer: Hierarchical Vision Transformer using Shifted Windows](https://amao996.github.io/blogs/paper-reading/SwinTransformer)<br>
+- [ViLT: Vision-and-Language Transformer Without Convolution or Region Supervision](https://amao996.github.io/blogs/paper-reading/ViLT)<br>
 
 #### Domain Adaptation
 
