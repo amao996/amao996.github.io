@@ -6,7 +6,7 @@ CVPR 2022
 
 提出MAE，具体来说随机盖住输入图片里的一些patch然后重建这些像素，设计了一个非对称的编码器解码器架构，编码器只对没有覆盖的patch进行操作，解码器用来重建被覆盖的像素。当覆盖很大一部分输入图片时，模型可以被迫学习到更多有用的信息（当覆盖很小一部分图片时通过插值即可得到原图像），因此MAE结合上述两部分可以在计算机视觉领域高效训练大模型。
 
-### Artrcture
+### Architecture
 
 <div align=center><img src="https://amao996.github.io/blogs/paper-reading/imgs/MAE/model.png" width="  "></div><br>
 
